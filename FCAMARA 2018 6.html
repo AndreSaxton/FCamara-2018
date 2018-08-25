@@ -1,0 +1,37 @@
+<html>
+    <header>    
+    <script>
+
+        class retangulo{
+            constructor(base = 0, altura = 0){
+                this.base = base;
+                this.altura = altura;                
+            }
+
+            mudarValorLados(base, altura){
+                this.base = base;
+                this.altura = altura;
+            }
+            retornarValorLados(){
+                console.log("A base mede: "+this.base+" m \nA altura é de: "+this.altura+" m");
+            }
+            calcularArea(){
+                console.log("A sua area mede:"+(this.base*this.altura)+" m2");                
+            }
+            calcularPerimetro(){
+                console.log("Seu perimetros é de: "+(this.base*2+this.altura*2)+" m");
+            }
+            
+        }
+        let ret = new retangulo(100,100);
+        ret.mudarValorLados(50,50);
+        ret.retornarValorLados();
+        ret.calcularArea();
+        ret.calcularPerimetro();
+
+    </script>
+    </header>
+    <body>
+
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+    <meta charset="utf-8">
+    <header>    
+    <script>
+        function calc(){
+            salMinimo = document.getElementById("sal").value;
+            horasTrab = document.getElementById("horas").value;
+            //let horasTrab = 16;
+            //let salMinimo = 900.00;
+            let imposto = 0.03;
+
+            //valor hora
+            console.log(0.1*salMinimo);
+            //sal bruto
+            console.log(horasTrab * (0.1*salMinimo));
+            //imposto
+            imposto = ((horasTrab * (0.1*salMinimo))*imposto);
+            console.log(imposto);               
+            //sal liquido
+            console.log((horasTrab * (0.1*salMinimo))-imposto);
+            alert("O salário a receber é de R$ "+ (horasTrab * (0.1*salMinimo)-imposto));
+        }
+
+    </script>
+    </header>
+    <body>
+        <table>
+            <tr>
+                <td><label>Horas Trabalhadas:</label></td>
+                <td><input type="number" min="0" id="horas"></td>
+            </tr>
+            <tr>
+                <td><label>Salário Minimo</label></td>
+                <td><input type="number" value="900.00" id="sal"></td>
+            </tr>            
+            <tr>
+                <td></td>
+                <td><button onclick="calc();">Calcular Salário</button></td>
+            </tr>
+        </table>
+    </body>
+</html>

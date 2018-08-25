@@ -1,0 +1,43 @@
+<html>
+    <meta charset="utf-8">
+    <header>        
+    <script>
+        function verPrimos(){
+            let nInicial = document.getElementById("inicio").value;
+            let nFinal = document.getElementById("fim").value;
+            let primo = true;
+            for(nInicial; nInicial <= nFinal; nInicial++){
+                for(cont = 2; cont < nInicial; cont ++){
+                    if(nInicial % cont == 0 && primo == true){                
+                        primo = false;
+                    }                
+                }
+                if(primo==true)
+                    //console.log(nInicial + " é numero primo");
+                    document.write(nInicial + " é numero primo<br>");
+                else
+                    //console.log(nInicial + "nao primo");
+                primo = true;
+            }
+        }    
+
+    </script>
+    </header>
+    <body>
+        <h2>Verificar números primos</h2>
+        <table>
+            <tr>
+                <td><label>Número Inicial: </label></td>
+                <td><input type="number" min="0" id="inicio"></td>
+            </tr>
+            <tr>
+                <td><label>Número Final: </label></td>
+                <td><input type="number" min="0" id="fim"></td>
+            </tr>
+            <tr><td></td><td><button onclick="verPrimos()">Verificar números primos</button></td></tr>
+        </table>
+        <p id="resultado"></p>
+        
+
+    </body>
+</html>

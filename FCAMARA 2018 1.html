@@ -1,0 +1,21 @@
+<html>
+    <header>    
+    <script>
+    let anoInicial = 2005;
+    let salarioInicial = 1000.00;
+    let anoAtual = 2010;    
+    let porcAumento = 0.015;
+
+    for(let cont = anoInicial; cont < anoAtual; cont++){
+        salarioInicial = salarioInicial * (1+porcAumento);
+        console.log("Ano: "+(cont+1));
+        console.log("Salario: "+salarioInicial);        
+        porcAumento *=2;        
+    }    
+    alert("Seu salario em "+anoAtual+" \né de R$ "+salarioInicial);
+    </script>
+    </header>
+    <body>
+
+    </body>
+</html>

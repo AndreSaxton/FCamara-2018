@@ -1,0 +1,47 @@
+<html>
+    <header>    
+    <script>
+
+        class contaCorrente{
+            constructor(numero, nomeCorrentista, saldo = 0){
+                this.numero = numero;
+                this.nomeCorrentista = nomeCorrentista;
+                this.saldo = saldo;
+            }
+            /*numero = "";
+            nomeCorrentista = "";
+            saldo = "";
+*/
+            alterarNome(nomeNovo){
+                this.nomeCorrentista = nomeNovo;
+                console.log("Nome atualizado para:"+ this.nomeCorrentista);
+                
+            }
+            deposito(valor){
+                this.saldo += valor;
+                console.log("Voce depositou: "+valor +"\nsaldo atual: "+this.saldo);
+                
+            }
+            saque(valor) {
+                if(this.saldo>=valor){
+                    this.saldo -= valor;
+                    console.log("Voce retirou: "+valor);                    
+                }                    
+                else{
+                    console.log("saldo insuficiente");
+                }
+                console.log("saldo atual: "+this.saldo);
+            }
+        }
+        let conta = new contaCorrente(1234, "André", 1000);
+        conta.alterarNome("Joao");
+        conta.deposito(200);
+        conta.saque(800);
+        conta.saque(401);
+
+    </script>
+    </header>
+    <body>
+
+    </body>
+</html>

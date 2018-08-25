@@ -1,0 +1,42 @@
+<html>
+    <meta charset="utf-8">
+    <header>    
+    <script>
+        function calc(){
+            //area quadrada a ser pintada em metros
+            let area = document.getElementById("area").value;
+            let valor = 80.00
+            let litros = 18;
+
+            //litros necessarios
+            area /=3;
+            console.log(area);
+            
+            if(area<litros)
+                alert("Você precisa comprar 1 lata");
+            else{                        
+                let quant = 1;
+                while(area>litros){
+                    area -= litros;
+                    console.log(area);
+                    quant++;                
+                }
+                console.log(quant);
+                alert("Você precisa comprar "+quant+" latas\nNo total de R$"+(valor*quant));
+                
+            }
+        }        
+
+    </script>
+    </header>
+    <body>        
+        <table>
+            <tr>
+                <td><label>Área a ser<br>pintada em m2</label></td>
+                <td><input type="number" id="area"></td>
+            </tr>
+            <tr><td></td><td><button onclick="calc()">Calcular</button></td></tr>
+        </table>
+
+    </body>
+</html>
